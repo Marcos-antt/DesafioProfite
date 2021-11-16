@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Profit-e</title>
+
 </head>
 <body>
-    <h1>AHOPÁ</h1>
+    <nav id="navbar">
+        <div class="navbar"> 
+            <img class="logo" src="{{ url_for('static', filename='img/logo.svg') }}" alt="">
+        </div>
+
+        <div class="busca">
+            <form action="" id="serach"> 
+                <input type="text" placeholder="O que você está procurando">
+            </form>
+        </div>
+
+        <div class="perfil">
+            <p>Minha Conta</p>
+        </div>
+
+        <div class="carrinho">
+            <img  src="{{ url_for('static', filename='img/carrinho.svg') }}">
+            <img  src="{{ url_for('static', filename='img/numero.svg') }}">
+        </div>
+
+        <div class="idiomas">
+            <img  src="{{ url_for('static', filename='img/brasil.png') }}">
+            <img  src="{{ url_for('static', filename='img/espanha.png') }}">
+            <img  src="{{ url_for('static', filename='img/reinounido.png') }}">
+        </div>
+
+    </nav>
+    <header id="slide">
+        <h1>SLIDESHOW</h1>
+    </header>
+    <article id="conteudo">
+        <h1>PRODUTOSSHOW</h1>
+    </article>
+    <footer id="rodape">
+        <h1>RODAPESHOW</h1>
+    </footer>
 </body>
 </html>
