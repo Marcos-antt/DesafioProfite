@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,37 @@
     <title>Profit-e</title>
 
 </head>
+
 <body>
     <nav id="navbar">
-        <div class="navbar"> 
+        <div class="navbar">
             <img class="logo" src="{{ url_for('static', filename='img/logo.svg') }}" alt="">
         </div>
 
         <div class="busca">
-            <form action="" id="serach"> 
-                <input type="text" placeholder="O que você está procurando">
+            <form action="" id="linha">
+                <input type="text" name="serch" id="search" placeholder="O que você está procurando">
             </form>
+            <img class="icobusca" src="{{ url_for('static', filename='img/busca.png') }}" alt="">
+            <div class="linha"><hr class="hr2"></div>
         </div>
-
-        <div class="perfil">
+    <div class="campoconta">
+        <div class="conta">
+            <img class="imgconta" src="{{ url_for('static', filename='img/person.png') }}" alt="">
             <p>Minha Conta</p>
         </div>
-
         <div class="carrinho">
-            <img  src="{{ url_for('static', filename='img/carrinho.svg') }}">
-            <img  src="{{ url_for('static', filename='img/numero.svg') }}">
+            <img src="{{ url_for('static', filename='img/carrinho.svg') }}">
+            <img src="{{ url_for('static', filename='img/numero.svg') }}">
         </div>
-
+        <div class="linhav"> </div>
         <div class="idiomas">
-            <img  src="{{ url_for('static', filename='img/brasil.png') }}">
-            <img  src="{{ url_for('static', filename='img/espanha.png') }}">
-            <img  src="{{ url_for('static', filename='img/reinounido.png') }}">
+            <img src="{{ url_for('static', filename='img/brasil.png') }}">
+            <img src="{{ url_for('static', filename='img/espanha.png') }}">
+            <img src="{{ url_for('static', filename='img/reinounido.png') }}">
         </div>
+    </div>
+
 
     </nav>
     <header id="slide">
@@ -46,4 +52,5 @@
         <h1>RODAPESHOW</h1>
     </footer>
 </body>
+
 </html>
