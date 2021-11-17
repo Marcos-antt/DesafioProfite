@@ -21,34 +21,36 @@
                 <input type="text" name="serch" id="search" placeholder="O que você está procurando">
             </form>
             <img class="icobusca" src="{{ url_for('static', filename='img/busca.png') }}" alt="">
-            <div class="linha"><hr class="hr2"></div>
+            <div class="linha">
+                <hr class="hr2">
+            </div>
         </div>
-    <div class="campoconta">
-        <div class="conta">
-            <img class="imgconta" src="{{ url_for('static', filename='img/person.png') }}" alt="">
-            <p>Minha Conta</p>
+        <div class="campoconta">
+            <div class="conta">
+                <img class="imgconta" src="{{ url_for('static', filename='img/person.png') }}" alt="">
+                <p>Minha Conta</p>
+            </div>
+            <div class="carrinho">
+                <img src="{{ url_for('static', filename='img/carrinho.svg') }}">
+                <img src="{{ url_for('static', filename='img/numero.svg') }}">
+            </div>
+            <div class="linhav"> </div>
+            <div class="idiomas">
+                <img src="{{ url_for('static', filename='img/brasil.png') }}">
+                <img src="{{ url_for('static', filename='img/espanha.png') }}">
+                <img src="{{ url_for('static', filename='img/reinounido.png') }}">
+            </div>
         </div>
-        <div class="carrinho">
-            <img src="{{ url_for('static', filename='img/carrinho.svg') }}">
-            <img src="{{ url_for('static', filename='img/numero.svg') }}">
-        </div>
-        <div class="linhav"> </div>
-        <div class="idiomas">
-            <img src="{{ url_for('static', filename='img/brasil.png') }}">
-            <img src="{{ url_for('static', filename='img/espanha.png') }}">
-            <img src="{{ url_for('static', filename='img/reinounido.png') }}">
-        </div>
-    </div>
-    
+
     </nav>
     <header id="slide">
         <div id="text">
-            <div  class="texto_banner">
-                    <h1>Nossa especialidade: experiencia em compra.</h1>
-                    <div class="linhabaner"></div>
+            <div class="texto_banner">
+                <h1>Nossa especialidade: experiencia em compra.</h1>
+                <div class="linhabaner"></div>
             </div>
         </div>
-        <div  class="img_banner">
+        <div class="img_banner">
 
         </div>
     </header>
@@ -57,32 +59,35 @@
     </article>
     <footer id="rodape">
         <div class=localizacao>
-        <div>
-            <h1>Localização</h1>
-            <div class="linhaloc"></div>
-            <p>São Paulo</p>
-            <p>Rua do Rócio, 423/1801</p>
-            <p>04552-000</p>
-            <p>+55 11 3333 3333</p>
-        </div>
-        <div>
-            <p>Rio de Janeiro</p>
-            <p>Rua do Rócio, 423/1801</p>
-            <p>04552-000</p>
-            <p>+55 11 3333 3333</p>
-        </div>
-        <div id="botoes">
-        <div id="contato">
-            <button class='btn_contet'>
-                <img src="{{ url_for('static', filename='img/email.png') }}" alt="" class="img_ft">
-                ENTRE EM CONTATO
-            </button>
-            
-            <button class='btn_contet1'>
-                <img src="{{ url_for('static', filename='img/telefone.png') }}" alt="" class="img_ft">
-                FALE COM O NOSSO CONSULTOR ONLINE
-            </button>
-        </div>
+            <div>
+                <h1>Localização</h1>
+                <div class="linhaloc"></div>
+                <p>São Paulo</p>
+                <p>Rua do Rócio, 423/1801</p>
+                <p>04552-000</p>
+                <p>+55 11 3333 3333</p>
+            </div>
+            <div>
+                <p>Rio de Janeiro</p>
+                <p>Rua do Rócio, 423/1801</p>
+                <p>04552-000</p>
+                <p>+55 11 3333 3333</p>
+            </div>
+            <div id="botoes">
+                <div id="contato">
+                    <button class='btn_contet'>
+
+                            <img src="{{ url_for('static', filename='img/email.png') }}" alt="" class="img_ft">
+                            ENTRE EM CONTATO
+
+                    </button>
+                    <button class='btn_contet1'>
+
+                            <img src="{{ url_for('static', filename='img/telefone.png') }}" alt="" class="img_ft">
+                            FALE COM O NOSSO CONSULTOR ONLINE
+
+                    </button>
+                </div>
     </footer>
 </body>
 
