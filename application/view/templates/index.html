@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body onload="carrega()">
     <nav id="navbar">
         <div class="navbar">
             <img class="logo" src="{{ url_for('static', filename='img/logo.svg') }}" alt="">
@@ -41,7 +41,6 @@
                 <img src="{{ url_for('static', filename='img/reinounido.png') }}">
             </div>
         </div>
-
     </nav>
     <header id="slide">
         <div id="text">
@@ -51,11 +50,18 @@
             </div>
         </div>
         <div class="img_banner">
-
         </div>
     </header>
     <article id="conteudo">
-        <h1>PRODUTOSSHOW</h1>
+        <div class=produtos>
+            <div>
+                <h2>Produtos</h2>
+            </div>
+            <div class="linhaprod"></div>
+        </div>
+
+        <div id="produtos"></div>
+
     </article>
     <footer id="rodape">
         <div class=localizacao>
@@ -63,32 +69,66 @@
                 <h1>Localização</h1>
                 <div class="linhaloc"></div>
                 <p>São Paulo</p>
-                <p>Rua do Rócio, 423/1801</p>
+                <p>Rua d o Rocio,423/1801</p>
+                <p>Vila Olímpica - SP</p>
                 <p>04552-000</p>
                 <p>+55 11 3333 3333</p>
             </div>
             <div>
                 <p>Rio de Janeiro</p>
-                <p>Rua do Rócio, 423/1801</p>
-                <p>04552-000</p>
+                <p>Vol. da P[atrica, 301/702</p>
+                <p>Botafogo - RJ</p>
+                <p>22270-000</p>
                 <p>+55 11 3333 3333</p>
             </div>
             <div id="botoes">
                 <div id="contato">
                     <button class='btn_contet'>
-
-                            <img src="{{ url_for('static', filename='img/email.png') }}" alt="" class="img_ft">
-                            ENTRE EM CONTATO
-
+                        <img src="{{ url_for('static', filename='img/email.png') }}" alt="" class="img_ft">
+                        <p>ENTRE EM CONTATO</p>
                     </button>
-                    <button class='btn_contet1'>
-
-                            <img src="{{ url_for('static', filename='img/telefone.png') }}" alt="" class="img_ft">
-                            FALE COM O NOSSO CONSULTOR ONLINE
-
+                    <button class='btn_contet'>
+                        <img class="imgf" src="{{ url_for('static', filename='img/telefone.png') }}" alt=""
+                            class="img_ft">
+                        <div class="textx">
+                            <p>FALE COM O NOSSO CONSULTO ONLINE</p>
+                        </div>
                     </button>
                 </div>
+            </div>
+        </div>
+        <div class="img">
+            <div class="img_powereby">
+                <img src="{{url_for('static', filename='/img/powereby.png')}}" alt="parceria">
+            </div>
+        </div>
+        </div>
     </footer>
 </body>
+
+<script>
+    function carrega() {
+        let xhr_produto = new XMLHttpRequest();
+        xhr_produto.open("GET","/produtos");
+        xhr_produto.send(null);
+        xhr_produto.onreadystatechange = function () {
+            if (xhr_produto.readyState == 4 && xhr_produto.status == 200) {
+                document.getElementById("produtos").innerHTML = xhr_produto.response;
+            }
+        }
+        return false;
+    }
+    function carrega2() {
+        let xhr_produto = new XMLHttpRequest();
+        xhr_produto.open("GET","/produtos2");
+        xhr_produto.send(null);
+        xhr_produto.onreadystatechange = function () {
+            if (xhr_produto.readyState == 4 && xhr_produto.status == 200) {
+                document.getElementById("produtos").innerHTML = xhr_produto.response;
+            }
+        }
+        return false;
+    }
+</script>
 
 </html>

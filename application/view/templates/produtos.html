@@ -1,0 +1,18 @@
+<img class="btnseta"  onclick="carrega()" src="{{url_for('static', filename='/img/btnesquerda.png')}}" alt="">
+{% for produto in produto_list %}
+<div>
+    <div class="produto">
+        <img id="fotoProduto" src="{{produto.get_imagens()}}">
+        <p id="nomeProduto">{{produto.get_name()}}</p>
+        <p class="precoantigo"> de {{ produto.get_preco_antigo() }}</p>
+        <div class="porapenas">
+            <p>por R$</p><p>{{ produto.get_preco() }}</p>
+        </div>
+        <p class="parcelas"> ou em {{ produto.get_prestacao() }}X de R${{ produto.get_valorPrestacao() }}</p>
+        <a class="botao_add" href="" id="btn-sucess">
+        <img class="imgcomprar" src="{{url_for('static', filename='/img/comprar.png')}}" alt="add"> </a>
+    </div>
+</div>
+{% endfor %}
+
+<img class="btnseta" onclick="carrega2()" src="{{url_for('static', filename='/img/btndireita.png')}}" alt="">
